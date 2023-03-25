@@ -9,12 +9,20 @@ Prerequisites: [Docker](https://docs.docker.com/get-docker/)
 
 Get the container `hello-container` from GitHub Packages and run on your system:
 
-```
+```shell
 docker pull ghcr.io/dmartinezfernandez/hello-container:main
 docker run --name hello-container -p 49160:8080 -d ghcr.io/dmartinezfernandez/hello-container:main
 ```
 
-Then open [localhost:49160](http://localhost:49160).
+Then open [localhost:49160](http://localhost:49160) and notice the counter increments
+on each refresh.
+
+Remove docker container and image when finished.
+
+```shell
+docker rm hello-container -f
+docker image rm ghcr.io/dmartinezfernandez/hello-container:main
+```
 
 ## Learning
 
